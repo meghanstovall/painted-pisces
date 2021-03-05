@@ -1,0 +1,9 @@
+<% @photos.each do |photo| %>
+  <section id="photo-<%=photo.id%>">
+    <div style="float:left">
+      <h2>Name: <%= link_to "#{photo.title}", "/photos/#{photo.id}"%></h2>
+      <%= image_tag("#{photo.image}", size: "300")%>
+    </div>
+
+  </section>
+<% end %>
